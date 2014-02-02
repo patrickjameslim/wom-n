@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Layout for Medium Screen */
+
+input[type="text"] {
+	height: 10%;
+
+}
+
+select {
+	padding: 15px;
+}
+
+.month {
+
+	width: 40%;
+
+}
+
+.day {
+	width: 20%;
+}
+
+.year {
+	width: 30%;
+}

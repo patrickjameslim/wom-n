@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.container {
+		width:90%;
+	}
+
+.logo-container {
+
+	background: url('../../img/wom-n-logo-small.png');
+		background-repeat: no-repeat;
+	width:200px;
+	height: 200px;
+}
+
+article h1 {
+	font-size: 4em;
+}
+
+article h2 {
+	font-size: 1.3em;
+	position:relative;
+	top: -30px;
+}
+
+input[type="text"], input[type="password"] {
+	-webkit-box-sizing: border-box;
+	moz-box-sizing: border-box;
+	o-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 90%;
+	height: 50px;
+	padding: 0.5em;
+	font-size: 1.5em;
+	}
+
+.check {
+	width: 20px;
+	height: 20px;
+	-moz-appearance: none;
+}
+
+.rem-pass label p {
+
+		font-size: 40%;
+}
+
+.buttons-container a {
+		font-size: 150%;	
+	}
+
+.join, .login {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

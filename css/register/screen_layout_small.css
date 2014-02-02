@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* Layout for Small Screen */
+
+input[type="text"] {
+	font-size: 1.2em;
+}
+
+select {
+	font-size: 1.2em;
+}
+.month {
+	width: 40%;
+}
+
+.day {
+	width: 20%;
+}
+
+.back, .next {
+	font-size: 1.7em;
+}

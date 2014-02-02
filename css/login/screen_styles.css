@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/test.png');
+	background-position:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	font-family: "Lato","Myriad Pro",sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+	color: #010101;
+}
+
+h1 {
+
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.7em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+.container {
+	width: 960px;
+	margin:0px auto 20px auto;
+}
+
+
+.page {
+	height: 100%;
+}
+
+input[type="text"], input[type="password"] {
+	
+	border: none;
+	font-family: "Lato","Myriad Pro",sans-serif;
+	font-size: 1.5em;
+	box-shadow: 1px 1px 15px rgba(0,0,0, 0.50);
+}
+
+.rem-pass p {
+	display: inline-block;
+}
+
+.login {
+	background: #111111;
+	color: #fff;
+}
+
+.join {
+	background: #ff3366;
+	color: #111111;
+	text-align: center;
+}
+
+.login:active {
+	background: #424242;
+}
+
+.join:active {
+	background:#fb4a76;
+}
+
+.clear-fix {
+	clear:both;
+	width: 100%;
+	height: 2%;
+}
