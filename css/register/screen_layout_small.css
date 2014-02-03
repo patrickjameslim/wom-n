@@ -2,8 +2,9 @@
 
 /* Layout for Small Screen */
 
-input[type="text"] {
+input[type="text"],  input[type="password"] {
 	font-size: 1.2em;
+	height: 5%;
 }
 
 select {
