@@ -36,7 +36,7 @@ h4 {
 }
 
 .register-header {
-	background:#ff3366;
+	background:#fb144e;
 	text-align:center;
 }
 
@@ -68,10 +68,6 @@ input[type="text"], input[type="password"] {
 
 .container p {
 	display:inline-block;
-}
-
-.gender-container {
-	background:green;
 }
 
 input[type="text"], input[type="password"] {
@@ -127,7 +123,7 @@ input[type="radio"] {
 }
 
 .next {
-	background:#ff3366;
+	background:#fb144e;
 	margin-top: 1.2em;
 }
 
