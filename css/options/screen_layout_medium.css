@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+header {
+	height: 30%;
+}
+
+.pic-container {
+	display: block;
+	width: 100%;
+	height:50%;
+}
+
+.profile-container h1 {
+	display: block;
+	line-height: 1em;
+	font-size: 2.5em;
+}
+
+.button-container {
+	height: 7%;
+}

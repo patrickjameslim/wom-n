@@ -4,7 +4,7 @@
 
 input[type="text"],  input[type="password"] {
 	font-size: 1.2em;
-	height: 5%;
+	height: 10%;
 }
 
 select {
@@ -20,4 +20,22 @@ select {
 
 .back, .next {
 	font-size: 1.7em;
+}
+
+.gender {
+
+	width: 100%;
+}
+
+.civil-status {
+	width: 100%;
+}
+
+@media screen and (min-height: 300px) and (max-height: 500px) {
+
+	input[type="text"],  input[type="password"] {
+	font-size: 1.2em;
+	height: 15%;
+}
+
 }
