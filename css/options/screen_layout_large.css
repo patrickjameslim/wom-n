@@ -1,77 +1,58 @@
 @charset "UTF-8";
+
+/* Layout for large screens */
+
 header {
-
-	height: 20%;
-}
-.pic-container {
-	width: 20%;
-	height: 100%;
-	padding-top: 3%;
+	height: 80px;
 }
 
-.profile-container {
-	height: 100%;
-	padding-top:2%;
+.back-container {
+	width:80px;
+	height:100%;
 }
 
-
-.bio {
-	width: 95%;
-	margin:0px auto;
-	font-size: 1.3em;
+.back-container a {
+	font-size:1.5em;
 }
 
-.location {
-	width: 95%;
-	margin: 3% auto;
-
+.information {
+	padding-top: 15px;
+	text-indent:30px;
+	width:350px;
 }
 
-
-.container {
-	width: 100%;
-	margin: 10px auto;
-
+.settings {
+	width: 30%;
 }
 
-.button-container {
-	width:100%;
-	height: 5%;
+.option {
+	width: 25%;
+	height: 200px;
 }
 
-
-.button:link, .button:visited{
-	
-	background-position: redpx 10px;
-	padding: 10px;
-	color: #fff;
-	width:100%;
-	height: 100%;
-	text-indent: 80px;
-	margin:10px 0px 10px 0px;
+.avatar {
+	background: url('../../img/profile-pic.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	float:left;
+	width:20%;
+	height:270px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+.content {
+	width: 80%;
+	height:272px;
+	font-size: 1.5em;
+	padding:20px 10px 10px 20px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
 }
 
-.ask:active {
-
-	background-position: 10px 10px;
+.timestamp {
+	font-style:italic;
+	text-align: right;
+	padding-right: 20px;
 }
-
-.discussions:active{
-	background-position: 10px 10px;
-}
-
-.activity:active{
-	background-position: 10px 10px;
-}
-
-.report:active{
-	background-position: 10px 10px;
-}
-
-.settings:active{
-	background-position: 10px 10px;
-}
-.logout:active{
-	background-position: 10px 10px;
-}
-
