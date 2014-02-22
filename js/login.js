@@ -1,5 +1,4 @@
 $(document).ready(function(){
-<<<<<<< HEAD
 	var host = 'localhost';
 	$('.login').click(function(){
 		var username = $(".username").val();
@@ -24,14 +23,10 @@ $(document).ready(function(){
 				}
 			});	
 		}
-=======
-
 	$('.login').click(function(){
 		$('.modal-bg').fadeIn(300);
 		$('.modal-container').fadeIn(300);
 		showModal("Insert your error message here.");
-
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
 	});
 
 	$('.okay').click(function(){
@@ -42,9 +37,8 @@ $(document).ready(function(){
 	});
 
 	function showModal(errorString){
-<<<<<<< HEAD
 		$('.modal-bg').fadeIn(300);
-			$('.modal-container').fadeIn(300);
+		$('.modal-container').fadeIn(300);
 		return $('.error').text(errorString);
 	}
 
@@ -75,10 +69,5 @@ $(document).ready(function(){
 				alert(e);
 			}
 		});
-=======
-
-		return $('.error').text(errorString);
-
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
 	}
 });
