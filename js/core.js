@@ -3,11 +3,9 @@ $(document).ready(function(){
 	
 	/*event listeners*/
 	$('.login').click(login);
-	/*Event Handler*/
-	$('.next').click(function(){
-		alert('Chicken');
-	});
-
+	$('.next').click(saveSession);
+	
+	/*Event Handler Helpers*/
 	$('.login').click(function(){
 		$('.modal-bg').fadeIn(300);
 		$('.modal-container').fadeIn(300);
@@ -21,7 +19,7 @@ $(document).ready(function(){
 	});
 
 
-	/*HELPERS*/
+	/*Function Helpers*/
 	//eto ung sa signup
 	function showModal(errorString){
 		$('.modal-bg').fadeIn(300);
@@ -80,5 +78,36 @@ $(document).ready(function(){
 				}
 			});	
 		}
+	}
+
+	function saveSession(){
+		var first_name = $('#first_name').val();
+		var last_name = $('#last_name').val();
+		var address = $('#address').val();
+		var contact_number = $('#contact_number').val();
+		var day = $(".day").val();
+		var month = $(".month").val();
+		var year = $(".year").val();
+		var birthdate = parseDate(year + "-" + month + "-" + day);
+
+		$.ajax({
+				url : 'http://' + host + '/public/savesession',
+				dataType: 'text',
+				data: {'first_name':first_name, 'last_name': last_name, 'address': address, 'contact_number' : contact_number, 'date' : birthdate},	
+				type: 'GET',
+				success: function(serverResponse){
+					var response = jQuery.parseJSON(serverResponse);
+					showModal(response.message);
+				},	
+				error: function(e){
+					showModal('Error Connecting to server..');
+				}
+			});	
+	}
+	// parse a date in yyyy-mm-dd format
+	function parseDate(input) {
+	  var parts = input.split('-');
+	  // new Date(year, month [, day [, hours[, minutes[, seconds[, ms]]]]])
+	  return new Date(parts[0], parts[1]-1, parts[2]); // Note: months are 0-based
 	}
 });
