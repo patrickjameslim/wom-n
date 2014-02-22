@@ -130,8 +130,4 @@ input[type="radio"] {
 .clear-fix {
 	clear:both;
 	height: 5%;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c

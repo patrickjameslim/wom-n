@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* Layout for large screens */
+
+header {
+	height: 80px;
+}
+
+.back-container {
+	width:80px;
+	height:100%;
+}
+
+.back-container a {
+	font-size:1.5em;
+}
+
+.information {
+	padding-top: 15px;
+	text-indent:30px;
+	width:350px;
+}
+
+.settings {
+	width: 30%;
+}
+
+.option {
+	width: 25%;
+	height: 200px;
+}
+
+.avatar {
+	background: url('../../img/profile-pic.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	float:left;
+	width:20%;
+	height:270px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+.content {
+	width: 80%;
+	height:272px;
+	font-size: 1.5em;
+	padding:20px 10px 10px 20px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+.timestamp {
+	font-style:italic;
+	text-align: right;
+	padding-right: 20px;
+}

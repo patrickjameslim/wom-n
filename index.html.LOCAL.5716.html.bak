@@ -31,18 +31,10 @@
           <form>
             <input type="text" name="username" class="username" placeholder="Username"/><br/><br/>
             <input type="password" name="password" class="password" placeholder="Password"/><br/>
-<<<<<<< HEAD
             <div class="rem-pass">
               <input type="checkbox" class="check"><label for="check"><p>Remember Password</p></label>
               
               </div>
-=======
-            <!--<div class="rem-pass">
-              <input type="checkbox" class="check"><label for="check"><p>Remember Password</p></label>
-              
-              </div>-->
-              <input type="hidden" name="hidden"/>
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
           </form> 
 
       </article>
@@ -74,11 +66,5 @@
   <script type="text/javascript" src="js/html5shiv.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
-<<<<<<< HEAD
   <!-- <script type="text/javascript" src="js/core.js"></script> -->
 </body>
-=======
-</body>
-
-</html>
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
