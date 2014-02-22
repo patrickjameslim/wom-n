@@ -1,0 +1,43 @@
+select {
+	font-size: 150%;
+	margin: 0px 0 30px 0;
+	padding: 1em;
+}
+
+.month {
+	width: 30%;
+}
+
+.day {
+	width: 10%;
+}
+
+.year {
+	width: 30%;
+}
+
+
+.container h3 {
+
+}
+.birthday-label {
+	margin-right: 10px;
+}
+
+.gender-label {
+	margin-right: 10px;
+}
+
+.civil-status {
+	width:50%;
+}
+
+.civil-status-label {
+	margin-right: 10px;
+}
+
+.back, .next {
+	font-size: 2.5em;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}

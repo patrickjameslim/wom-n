@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* Layout for Large Screens */
+
+
+.container {
+width:90%;
+}
+
+.logo-container {
+	
+	background-image:url('../../img/wom-n-logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width:400px;
+	height:400px;
+	margin:0px auto;
+}
+
+header {
+
+	margin: 2% auto 0px auto;
+}
+
+
+article {
+	text-align: center;
+
+}
+
+article h1 {
+	font-size: 5em;
+}
+
+article h2 {
+	font-weight: normal;
+	position:relative;
+	top:-30px;
+}
+input[type="text"], input[type="password"]{
+	-webkit-box-sizing: border-box;
+	moz-box-sizing: border-box;
+	o-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 90%;
+	height: 70px;
+	padding: 0.5em;
+	font-size: 2.5em;
+	margin: 2% 0px 1% 0px;
+}
+.rem-pass {	
+	font-size: 2.5em;
+	width: 100%;
+	color:#fff;
+	margin-top: 2%;
+	text-align: center;
+}
+
+.check {
+	width: 30px;
+	height: 30px;
+	-moz-appearance: none;
+}
+
+.rem-pass label p {
+	position: relative;
+	top: -4px;
+}
+
+.buttons-container {
+	width: 100%;
+	display: block;
+	margin: 3% auto 0px auto;
+}
+
+.buttons-container a {
+
+	font-size: 250%;	
+	text-decoration: none;
+	font-weight:bold;
+
+}
+
+.join {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 4%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+
+.login {
+		text-align: center;
+		display: inline-block;
+		width:100%;
+		padding-top: 3%;
+		padding-bottom: 3%;
+}
+
+.modal-container {
+
+	position:absolute;
+	top:25%;
+	left:25%;
+	width: 50%;
+	height: 250px;
+
+}
+
+.modal-container h1 {
+	font-size: 2em;
+}
+
+.modal-container h2 {
+	margin-top:1.5em;
+	margin-bottom:0;
+	height: 20%;
+	line-height: 1.2em;
+	font-size: 1.3em;
+}
+
+.modal-container a {
+
+	font-size: 2.3em;
+
+}
+
+.okay {
+	height: 110%;
+	width: 100%;
+	text-align: center;
+	padding-top: 5%;
+	margin-top:10%;
+}
+
+.buttons {
+	height: 20%;
+	margin:0px auto;
+
+}
