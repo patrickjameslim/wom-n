@@ -3,12 +3,7 @@
 /* Layout for Medium Screen */
 
 input[type="text"], input[type="password"] {
-<<<<<<< HEAD
-	height: 8%;
-=======
 	height: 10%;
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
-
 }
 
 select {
@@ -27,8 +22,6 @@ select {
 
 .year {
 	width: 30%;
-<<<<<<< HEAD
-=======
 }
 
 .gender {
@@ -46,7 +39,4 @@ select {
 	input[type="text"],  input[type="password"] {
 	font-size: 1.2em;
 	height: 15%;
-}
-
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
 }

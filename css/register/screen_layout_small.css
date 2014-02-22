@@ -4,15 +4,10 @@
 
 input[type="text"],  input[type="password"] {
 	font-size: 1.2em;
-<<<<<<< HEAD
-	height: 5%;
-=======
-	height: 10%;
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
+	height: 50px;
 }
-
 select {
-	font-size: 1.2em;
+	font-size: 1em;
 }
 .month {
 	width: 40%;
@@ -24,8 +19,6 @@ select {
 
 .back, .next {
 	font-size: 1.7em;
-<<<<<<< HEAD
-=======
 }
 
 .gender {
@@ -42,7 +35,4 @@ select {
 	input[type="text"],  input[type="password"] {
 	font-size: 1.2em;
 	height: 15%;
-}
-
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
 }
