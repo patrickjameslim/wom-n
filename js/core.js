@@ -81,16 +81,20 @@ $(document).ready(function(){
 	}
 
 	function saveSession(){
-		var first_name = $('#first_name').val();
-		var last_name = $('#last_name').val();
+		var first_name = $('#first-name').val();
+		var last_name = $('#last-name').val();
 		var address = $('#address').val();
-		var contact_number = $('#contact_number').val();
+		var contact_number = $('#contact-number').val();
 		var day = $(".day").val();
 		var month = $(".month").val();
 		var year = $(".year").val();
-		var birthdate = parseDate(year + "-" + month + "-" + day);
-
-		$.ajax({
+		var civil_status = $(".civil-status").val();
+		var birthdate = (year + "-" + month + "-" + day);
+		var gender = $(".gender").val();
+		if(first_name == '' || last_name == '' || address == '' || day == '' || month == '' || year == ''){
+			showModal("Please complete all fields");
+		}else{
+			$.ajax({
 				url : 'http://' + host + '/public/savesession',
 				dataType: 'text',
 				data: {'first_name':first_name, 'last_name': last_name, 'address': address, 'contact_number' : contact_number, 'date' : birthdate},	
@@ -103,6 +107,7 @@ $(document).ready(function(){
 					showModal('Error Connecting to server..');
 				}
 			});	
+		}
 	}
 	// parse a date in yyyy-mm-dd format
 	function parseDate(input) {

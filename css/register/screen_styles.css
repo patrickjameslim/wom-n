@@ -130,8 +130,47 @@ input[type="radio"] {
 .clear-fix {
 	clear:both;
 	height: 5%;
-<<<<<<< HEAD
 }
-=======
+.modal-bg {
+	display: none;
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.75);
+	z-index: 999;
 }
->>>>>>> 0247c5acb6761c877e4dcf6ead021e5ffb08d72c
+
+.modal-container {
+	display: none;
+	background: #fff;
+	margin: 0px auto;
+	z-index: 1000;
+}
+
+.modal-container h1 {
+	display: block;
+	padding: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align:center;
+
+}
+
+.modal-container h2 {
+	display: block;
+	text-align: center;
+}
+
+.okay:link, .okay:visited {
+
+	display: inline-block;
+	background: #fb144e;
+	text-decoration: none;
+	color:#010101;
+}
+
+.okay:active {
+	background: #fb4a76;
+}
