@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	var host = 'localhost';
+	//eto ung sa login button
 	$('.login').click(function(){
 		var username = $(".username").val();
 		var password = $(".password").val();
@@ -19,11 +20,17 @@ $(document).ready(function(){
 					showModal(response.message);
 				},	
 				error: function(e){
-					alert("hehe");
+					showModal('Error Connecting to server..');
 				}
 			});	
 		}
 	});
+
+	//eto ung sa signup
+	$('.next').click(function(){
+		alert('Chicken');
+	});
+
 	$('.login').click(function(){
 		$('.modal-bg').fadeIn(300);
 		$('.modal-container').fadeIn(300);
