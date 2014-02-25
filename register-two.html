@@ -21,22 +21,35 @@
       <h2>Account Information</h2>
 
       <form>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Confirm Password">
-        <input type="text" placeholder="Email Address">
+        <input type="text" class = "username" name = "username" placeholder="Username">
+        <input type="password"  class = "password" name = "password" placeholder="Password">
+        <input type="password" class = "confirm_password" placeholder="Confirm Password">
+        <input type="email" class = "email" name = "email" placeholder="Email Address">
 
       <div class="buttons-container">
          <a href="register-one.html" class="back">&lt;Back</a>
-         <a href="#" class="next">Register&gt;</a>
+         <a href="#" class="next register-button">Register&gt;</a>
       </div>
   </div>
 
   <div class="clear-fix">
 
   </div>
+    <div class="modal-bg">
 
+  </div>
+   <div class="modal-container">
+       <h1>Information</h1>
+       <h2 class="error"></h2>
+        <div class="buttons">
+            <a href="#" class="okay">Okay</a>
+        </div>
+  </div>
+  <div class="clear-fix">
+
+  </div>
   <script type="text/javascript" src="js/html5shiv.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/core.js"></script>
 </body>
-
 </html>

@@ -1,10 +1,9 @@
 $(document).ready(function(){
-	var host = 'localhost/backn';
-	
+	var host = 'localhost/backn';	
 	/*event listeners*/
 	$('.login').click(login);
-	$('.next').click(saveSession);
-	
+	$('.next-button').click(saveSession);
+	$('.register-button').click(register);
 	/*Event Handler Helpers*/
 	$('.login').click(function(){
 		$('.modal-bg').fadeIn(300);
@@ -80,7 +79,7 @@ $(document).ready(function(){
 		}
 	}
 
-	function saveSession(){
+	function saveSession(event){
 		var first_name = $('#first-name').val();
 		var last_name = $('#last-name').val();
 		var address = $('#address').val();
@@ -91,22 +90,52 @@ $(document).ready(function(){
 		var civil_status = $(".civil-status").val();
 		var birthdate = (year + "-" + month + "-" + day);
 		var gender = $(".gender").val();
-		if(first_name == '' || last_name == '' || address == '' || day == '' || month == '' || year == ''){
+		if(first_name == '' || last_name == '' || address == '' || day == '' || month == '' || year == '' || civil_status == ''){
 			showModal("Please complete all fields");
 		}else{
+			showModal("Connecting to Server..");
 			$.ajax({
 				url : 'http://' + host + '/public/savesession',
 				dataType: 'text',
-				data: {'first_name':first_name, 'last_name': last_name, 'address': address, 'contact_number' : contact_number, 'date' : birthdate},	
+				data: {'first_name':first_name, 'last_name': last_name, 'address': address, 'contact_number' : contact_number, 'date' : birthdate, 'gender' : gender, 'civil_status' : civil_status},	
 				type: 'GET',
-				success: function(serverResponse){
-					var response = jQuery.parseJSON(serverResponse);
-					showModal(response.message);
-				},	
+				success: function(response){
+					window.location.href = "register-two.html";
+				},
 				error: function(e){
-					showModal('Error Connecting to server..');
+					showModal('Error Connecting to server');
+					return false;
 				}
 			});	
+		}
+	}
+	function register(){
+		var username = $(".username").val();
+		var password = $(".password").val();
+		var confirmPassword = $(".confirm_password").val();
+		var email =$(".email").val();
+		if(password != confirmPassword){
+			showModal("Passwords do not match");
+		}else{
+			if(username == '' || password == '' || email == '' || confirmPassword == ''){
+				showModal("Please complete all fields");
+			}else{	
+				showModal("Connecting to Server..");
+				$.ajax({
+					url : 'http://' + host + '/public/register',
+					dataType: 'text',
+					data: {'username' : username, 'password' : password, 'email' : email},	
+					type: 'GET',
+					success: function(serverResponse){
+						var response = jQuery.parseJSON(serverResponse);
+						showModal(response.message);
+					},
+					error: function(e){
+						showModal('Error Connecting to server');
+						return false;
+					}
+				});	
+			}
 		}
 	}
 	// parse a date in yyyy-mm-dd format

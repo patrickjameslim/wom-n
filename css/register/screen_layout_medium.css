@@ -2,7 +2,7 @@
 
 /* Layout for Medium Screen */
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type = "email"]  {
 	height: 10%;
 }
 
@@ -33,7 +33,46 @@ select {
 	width: 100%;
 }
 
+.modal-container {
 
+	position:absolute;
+	top:25%;
+	left:9%;
+	width: 80%;
+	height: 250px;
+
+}
+
+.modal-container h1 {
+	font-size: 2em;
+}
+
+.modal-container h2 {
+	margin-top:1.5em;
+	margin-bottom:0;
+	height: 20%;
+	line-height: 1.2em;
+	font-size: 1.3em;
+}
+
+.modal-container a {
+
+	font-size: 2.3em;
+
+}
+
+.okay {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	padding-top: 5%;
+	margin-top:10%;
+}
+.buttons {
+	height: 20%;
+	margin:0px auto;
+
+}
 @media screen and (min-height: 300px) and (max-height: 500px) {
 
 	input[type="text"],  input[type="password"] {
