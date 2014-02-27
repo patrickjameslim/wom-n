@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body {
+	background:none
+}
+header {
+
+	width: 100%;
+
+}
+
+.menu-container {
+	width: 100%;
+	height: 70px;
+
+}
+
+.menu h2 {
+	font-size: 1.3em;
+}
+
+
+.icon {
+	width: 42px;
+	height: 42px;
+}
+
+.report {
+	width: 100%;
+	margin-bottom: 0px;
+}
+.report-icon {
+
+background: url('../../img/report-medium.png');
+background-repeat:no-repeat;
+
+}
+
+.messages-icon {
+background: url('../../img/messages-medium.png');
+background-repeat:no-repeat;
+}
+
+.discussions-icon {
+background: url('../../img/discussions-medium.png');
+background-repeat:no-repeat;
+}
+
+.settings-icon {
+	background: url('../../img/logout-medium.png');
+	background-repeat:no-repeat;
+}
+
+
+
+
+.messages {
+	width: 100%;
+}
+
+.username {
+	width: 30%;
+}
+
+.subject {
+	width: 50%;
+}
+
+.date {
+	width: 10%;
+}

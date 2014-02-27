@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* Layout for large screens */
+
+body {
+	background: url('../../img/fabric_plaid.png');
+}
+
+.menu-container {
+	width: 90%;
+	height: 100px;
+	margin: 0px auto;
+}
+
+.menu {
+
+	float: left;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+}
+
+header {
+
+	width: 90%;
+
+}
+
+.icon {
+	width: 62px;
+	height: 62px;
+}
+
+.report-icon {
+background: url('../../img/report.png');
+background-repeat:no-repeat;
+
+}
+
+.messages-icon {
+background: url('../../img/messages.png');
+background-repeat:no-repeat;
+}
+
+.discussions-icon {
+background: url('../../img/discussions.png');
+background-repeat:no-repeat;
+}
+
+.settings-icon {
+	background: url('../../img/logout.png');
+	background-repeat:no-repeat;
+}
+
+.discussions {
+	width: 90%;
+	margin: 0px auto;
+}
+
+.actions-wrapper {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.page {
+	border: 1px solid #ccc;
+	margin-left: 10px;
+	width: 70px;
+	height: 50px;
+	padding: 5px;
+	font-size: 1.3em;
+}
+
+p.jump-label {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.topics-wrapper a:link, .topics-wrapper a:visited {
+	color: #333;
+}
+
+.username, .title, .date {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 1.3em;
+}
+
+.date {
+	font-style: italic;
+	text-align: right;
+	padding-bottom: 3px;
+}
+

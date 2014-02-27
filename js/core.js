@@ -17,6 +17,8 @@ $(document).ready(function(){
 		$('.username').focus();
 	});
 
+	$('.logout-button').click(logoutUser);
+
 
 	/*Function Helpers*/
 	//eto ung sa signup
@@ -44,7 +46,7 @@ $(document).ready(function(){
 		$.ajax({
 			url : 'http://localhost/backn/public/signup',
 			data: {"username":"jm_07", "password":"hahaha", "birthdate":"1994/28/03" , "first_name": "JM", "last_name": "Ramos", "gender": 1, "email": "jmramos@creativejose.com", "civil_status": 1, "role": 1},
-			dataType: 'json',
+			dataType: 'jsonp',
 			type: 'GET',
 			success: function(response){
 				alert(response);
@@ -65,7 +67,7 @@ $(document).ready(function(){
 			showModal("Logging in.. Please wait");
 			$.ajax({
 				url : 'http://' + host + '/public/login',
-				dataType: 'text',
+				dataType: 'jsonp',
 				data: {'username':username,'password':password},	
 				type: 'GET',
 				success: function(serverResponse){
@@ -96,7 +98,7 @@ $(document).ready(function(){
 			showModal("Connecting to Server..");
 			$.ajax({
 				url : 'http://' + host + '/public/savesession',
-				dataType: 'text',
+				dataType: 'jsonp',
 				data: {'first_name':first_name, 'last_name': last_name, 'address': address, 'contact_number' : contact_number, 'date' : birthdate, 'gender' : gender, 'civil_status' : civil_status},	
 				type: 'GET',
 				success: function(response){
@@ -123,7 +125,7 @@ $(document).ready(function(){
 				showModal("Connecting to Server..");
 				$.ajax({
 					url : 'http://' + host + '/public/register',
-					dataType: 'text',
+					dataType: 'jsonp',
 					data: {'username' : username, 'password' : password, 'email' : email},	
 					type: 'GET',
 					success: function(serverResponse){
@@ -143,5 +145,42 @@ $(document).ready(function(){
 	  var parts = input.split('-');
 	  // new Date(year, month [, day [, hours[, minutes[, seconds[, ms]]]]])
 	  return new Date(parts[0], parts[1]-1, parts[2]); // Note: months are 0-based
+	}
+	function logoutUser(){
+		showModal("Logging out..");
+		$.ajax({
+				url : 'http://' + host + '/public/user/logout',
+				dataType: 'text',
+				type: 'GET',
+				success: function(response){
+					window.location.href = "index.html";
+				},
+				error: function(e){
+					showModal('Error Connecting to server');
+					return false;
+				}
+			});	
+	}
+	function sendMessage(){
+		showModal("Connecting to Server");
+		var subject = $(".subject").val();
+		var perpetrator = $(".perpetrator").val();
+		var day = $(".day").val();
+		var month = $(".month").val();
+		var year = $(".year").val();
+		var details = $(".details").text();
+		$.ajax({
+			url : 'http://' + host + '/public/user/logout',
+				dataType: 'jsonp',
+				data:{"subject":subject,"perpetrator":perpetrator,"date_commited":},
+				type: 'GET',
+				success: function(response){
+					
+				},
+				error: function(e){
+					showModal('Error Connecting to server');
+					return false;
+				}
+		});
 	}
 });

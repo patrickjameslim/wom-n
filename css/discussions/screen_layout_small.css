@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.report h1 {
+	font-size: 1.6em;
+}
+
+.menu-container {
+
+	height: 65px;
+	width: 100%;
+}
+
+
+header {
+
+	width: 100%;
+
+}
+.menu h2 {
+	font-size: 0.9em;
+}
+
+
+.icon {
+	width: 42px;
+	height: 42px;
+}
+.report-icon {
+
+background: url('../../img/report-medium.png');
+background-repeat:no-repeat;
+
+}
+
+.messages-icon {
+background: url('../../img/messages-medium.png');
+background-repeat:no-repeat;
+}
+
+.discussions-icon {
+background: url('../../img/discussions-medium.png');
+background-repeat:no-repeat;
+}
+
+.settings-icon {
+	background: url('../../img/logout-medium.png');
+	background-repeat:no-repeat;
+}
+
+.discussions {
+	width: 100%;
+}
+
+.page {
+	height: 40px;
+	font-size: 1.2em;
+
+}
+
+.username, .title, .date {
+	font-size: 1em;
+}

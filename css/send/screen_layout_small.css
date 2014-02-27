@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+.report h1 {
+	font-size: 1.6em;
+}
+
+.menu-container {
+
+	height: 65px;
+	width: 100%;
+}
+
+
+header {
+
+	width: 100%;
+
+}
+.menu h2 {
+	font-size: 0.9em;
+}
+
+
+.icon {
+	width: 42px;
+	height: 42px;
+}
+.report-icon {
+
+background: url('../../img/report-medium.png');
+background-repeat:no-repeat;
+
+}
+
+.messages-icon {
+background: url('../../img/messages-medium.png');
+background-repeat:no-repeat;
+}
+
+.discussions-icon {
+background: url('../../img/discussions-medium.png');
+background-repeat:no-repeat;
+}
+
+.settings-icon {
+	background: url('../../img/logout-medium.png');
+	background-repeat:no-repeat;
+}
+
+.report {
+
+width: 100%;
+margin: 20px auto;
+color: #111;
+margin-bottom: 0;
+}
+
+.report h1 {
+	margin-bottom: 20px;
+}
+.month, .day, .year {
+padding: 10px;
+font-size: 1.3em;
+height: 50px;
+box-shadow: 0px 0px 10px rgba(0,0,0, .3);
+}
+
+.birthday {
+	width:90%;
+	margin: 0px auto;
+}
+
+.month {
+
+width: 40%;
+
+}
+
+.day {
+	width: 20%;
+}
+
+.year {
+
+	width: 35%;
+
+}
+
+textarea {
+	display: block;
+	width: 90%;
+	height: 100px;
+	font-size: 1.3em;
+	margin: 10px auto 0px auto;
+	padding: 10px;
+}
+
+input[type="text"] {
+
+width: 90%;
+height: 50px;
+margin: 0px auto 10px auto;
+font-size: 1.3em;
+padding: 10px;
+}
+
+.submit {
+	font-family: "Lato","Myriad Pro", sans-serif;
+	font-size: 1.5em;
+	width: 30%;
+	height: 50px;
+	margin-top: 3%;
+
+}

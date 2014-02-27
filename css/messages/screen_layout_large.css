@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+body {
+	background: url('../../img/fabric_plaid.png');
+}
+
+.menu-container {
+	width: 90%;
+	height: 100px;
+	margin: 0px auto;
+}
+
+.menu {
+
+	float: left;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+}
+
+header {
+
+	width: 90%;
+
+}
+
+.icon {
+	width: 62px;
+	height: 62px;
+}
+
+.report-icon {
+background: url('../../img/report.png');
+background-repeat:no-repeat;
+
+}
+
+.messages-icon {
+background: url('../../img/messages.png');
+background-repeat:no-repeat;
+}
+
+.discussions-icon {
+background: url('../../img/discussions.png');
+background-repeat:no-repeat;
+}
+
+.settings-icon {
+	background: url('../../img/logout.png');
+	background-repeat:no-repeat;
+}
+
+.messages {
+	width: 90%;
+	margin: 0px auto;
+}
+
+.actions-wrapper {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.category, .page {
+	height: 40px;
+	width: 80px;
+	padding-left: 10px;
+	margin-top: 5px;
+}
+
+.message-wrapper {
+	border-top: 1px solid #ccc;
+}
+
+.username {
+	width: 20%;
+	padding-left: 10px;
+}
+
+.subject {
+	width: 50%;
+}
+
+.date {
+	width: 25%;
+	text-align: right;
+}
+
+.delete, .add {
+	margin-top: 10px;
+	margin-right: 10px;
+}
