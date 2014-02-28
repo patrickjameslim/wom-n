@@ -1,9 +1,11 @@
 $(document).ready(function(){
-	var host = 'localhost/backn';	
+	var host = 'creativejose.com';
 	/*event listeners*/
 	$('.login').click(login);
 	$('.next-button').click(saveSession);
 	$('.register-button').click(register);
+	$('.send-message-button').click(sendMessage);
+	$('.report-button').click(sendReport);
 	/*Event Handler Helpers*/
 	$('.login').click(function(){
 		$('.modal-bg').fadeIn(300);
@@ -28,35 +30,6 @@ $(document).ready(function(){
 		return $('.error').text(errorString);
 	}
 
-	function sendToServer(url, parameters){
-		$.ajax({
-			url : 'http://localhost/backn/public/login',
-			dataType: 'text',
-			type: 'GET',
-			success: function(response){
-				alert(response);
-			},
-			error: function(e){
-				alert(e);
-			}
-		});
-	}
-
-	function createAccount(){
-		$.ajax({
-			url : 'http://localhost/backn/public/signup',
-			data: {"username":"jm_07", "password":"hahaha", "birthdate":"1994/28/03" , "first_name": "JM", "last_name": "Ramos", "gender": 1, "email": "jmramos@creativejose.com", "civil_status": 1, "role": 1},
-			dataType: 'jsonp',
-			type: 'GET',
-			success: function(response){
-				alert(response);
-			},
-			error: function(e){
-				alert(e);
-			}
-		});
-	}
-
 	function login(){
 		var username = $(".username").val();
 		var password = $(".password").val();
@@ -68,14 +41,15 @@ $(document).ready(function(){
 			$.ajax({
 				url : 'http://' + host + '/public/login',
 				dataType: 'jsonp',
+				crossOrigin:true,
 				data: {'username':username,'password':password},	
 				type: 'GET',
-				success: function(serverResponse){
-					var response = jQuery.parseJSON(serverResponse);
+				success: function(response){
+					window.location.href = "messages.html";
 					showModal(response.message);
 				},	
-				error: function(e){
-					showModal('Error Connecting to server..');
+				error: function(jqXHR, textStatus, errorThrown){
+					showModal("Error Connecting to Server");
 				}
 			});	
 		}
@@ -99,6 +73,7 @@ $(document).ready(function(){
 			$.ajax({
 				url : 'http://' + host + '/public/savesession',
 				dataType: 'jsonp',
+				crossOrigin:true,
 				data: {'first_name':first_name, 'last_name': last_name, 'address': address, 'contact_number' : contact_number, 'date' : birthdate, 'gender' : gender, 'civil_status' : civil_status},	
 				type: 'GET',
 				success: function(response){
@@ -126,11 +101,11 @@ $(document).ready(function(){
 				$.ajax({
 					url : 'http://' + host + '/public/register',
 					dataType: 'jsonp',
+					crossOrigin:true,
 					data: {'username' : username, 'password' : password, 'email' : email},	
 					type: 'GET',
-					success: function(serverResponse){
-						var response = jQuery.parseJSON(serverResponse);
-						showModal(response.message);
+					success: function(response){
+						window.location.href = "messages.html";
 					},
 					error: function(e){
 						showModal('Error Connecting to server');
@@ -150,7 +125,8 @@ $(document).ready(function(){
 		showModal("Logging out..");
 		$.ajax({
 				url : 'http://' + host + '/public/user/logout',
-				dataType: 'text',
+				dataType: 'jsonp',
+				crossOrigin:true,
 				type: 'GET',
 				success: function(response){
 					window.location.href = "index.html";
@@ -161,26 +137,65 @@ $(document).ready(function(){
 				}
 			});	
 	}
-	function sendMessage(){
-		showModal("Connecting to Server");
+
+	function sendReport(){
 		var subject = $(".subject").val();
 		var perpetrator = $(".perpetrator").val();
 		var day = $(".day").val();
 		var month = $(".month").val();
 		var year = $(".year").val();
-		var details = $(".details").text();
-		$.ajax({
-			url : 'http://' + host + '/public/user/logout',
+		var date_commited = (year + "-" + month + "-" + day);
+		var details = $(".details").val();
+		if(subject == '' || details == ''){
+			showModal("Subject and Details are Required");
+		}else{
+			showModal("Connecting to Server");
+			$.ajax({
+				url : 'http://' + host + '/public/reports/add',
 				dataType: 'jsonp',
-				data:{"subject":subject,"perpetrator":perpetrator,"date_commited":},
+				crossOrigin: true,
+				data:{"subject":subject,"perpetrator":perpetrator,"date_commited":date_commited, "message":details},
 				type: 'GET',
 				success: function(response){
-					
+					showModal(response.message);
+					$(".subject").val("");
+					$(".perpetrator").val("");
+					$(".details").val("");
 				},
 				error: function(e){
 					showModal('Error Connecting to server');
 					return false;
 				}
-		});
+			});
+		}
+	}
+	function sendMessage(){
+		var subject = $(".subject").val();
+		var recipient = $(".recipient").val();
+		var message = $(".message").val();
+		if(subject == '' || recipient == '' || message == ''){
+			showModal("Please Complete all fields");
+		}else{
+			showModal("Connecting to Server");
+			$.ajax({
+				url : 'http://' + host + '/public/messages/current/sendmessage',
+				dataType: 'jsonp',
+				crossOrigin:true,
+				data:{"subject":subject,"recipient":recipient,"message":message},
+				type: 'GET',
+				success: function(response){
+					if(response.message == 1){
+						showModal("Message Sent");
+						$(".subject").val("");
+						$(".recipient").val("");
+						$(".message").text("");
+					}
+				},
+				error: function(e){
+					showModal("User Not Found");
+					return false;
+				}
+			});
+		}
 	}
 });
