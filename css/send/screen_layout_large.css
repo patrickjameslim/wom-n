@@ -106,11 +106,12 @@ font-size: 1.5em;
 padding: 10px;
 }
 
-.submit {
+.send-message-button {
+	display: block;
 	font-family: "Lato","Myriad Pro", sans-serif;
 	font-size: 2em;
 	width: 30%;
 	height: 50px;
 	margin-top: 3%;
-
+	padding-top: 20px;
 }

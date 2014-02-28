@@ -126,13 +126,14 @@ textarea {
 }
 
 .submit {
-
+	text-align: center;
 	background:#fb144e;
 	color: #101010;
 	border: none;
 	cursor: hand;
 	margin-bottom: 20px;
 	width: 150px;
+	margin-left: 10px;
 }
 
 .clear-fix {
