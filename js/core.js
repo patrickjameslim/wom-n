@@ -105,7 +105,7 @@ $(document).ready(function(){
 					data: {'username' : username, 'password' : password, 'email' : email},	
 					type: 'GET',
 					success: function(response){
-						window.location.href = "messages.html";
+						window.location.href = "login.html";
 					},
 					error: function(e){
 						showModal('Error Connecting to server');
@@ -189,6 +189,8 @@ $(document).ready(function(){
 						$(".subject").val("");
 						$(".recipient").val("");
 						$(".message").text("");
+					}else{
+						showModal("User Not Found");
 					}
 				},
 				error: function(e){
